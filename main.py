@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List
 
-app = FastAPI(title="My Enhanced API - Week 2")
+app = FastAPI(title="My fastapi en semana 2")
 
 # Modelos de datos
 class Product(BaseModel):
@@ -28,7 +28,7 @@ products = []
 # Endpoints básicos
 @app.get("/")
 def hello_world() -> dict:
-    return {"message": "Week 2 API with Pydantic and Type Hints!"}
+    return {"message": "la semana 2 con fastapi con Pydantic y Type Hints!"}
 
 @app.get("/products", response_model=ProductListResponse)
 def get_products() -> ProductListResponse:
